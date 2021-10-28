@@ -495,11 +495,11 @@ a:active {
   bottom: 20px;
   right: 20px;
   z-index: 99;
-
+  overflow:hidden;
   border: none;
   outline: none;
   background: #5d1451;
-
+  margin:auto;
   cursor: pointer;
   padding: 1em;
   scroll-behavior: smooth;
