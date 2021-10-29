@@ -76,7 +76,7 @@ body {
 
 .inicio {
   height: 100%;
-  width:100%;	
+ 	
   padding: 5em 8em;
   background: white;
   font-family: Montserrat;
@@ -131,7 +131,7 @@ body {
 
 .acerca {
   height: 100%;
-  width:100%;
+  
   padding: 5em 8em;
   background: teal;
   font-family: Open Sans;
@@ -158,7 +158,7 @@ body {
 
 .portafolio {
   height: 100%;
-  width:100%;	
+ 	
   padding: 5em 8em;
   background: white;
   font-family: Open Sans;
@@ -341,7 +341,7 @@ body {
 
 .contacto {
   height: 100%;
-  width:100%;		
+  		
   padding: 5em 8em;
   background: teal;
   font-family: Montserrat;
