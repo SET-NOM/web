@@ -473,7 +473,7 @@ a:active {
 }
 
 .foot {
-  background: gold; /*#5d1451 moraito*/
+  background: gold; /*#6d29bd moraito*/
   display: grid;
   grid-template-columns: auto auto;
   padding: 0.5em;
@@ -509,7 +509,7 @@ a:active {
   overflow:hidden;
   border: none;
   outline: none;
-  background: #5d1451;
+  background: #6d29bd;
   margin:auto;
   cursor: pointer;
   padding: 1em;
@@ -518,7 +518,7 @@ a:active {
 }
 
 #myBtn:hover {
-   background: #24071f;
+   background: #9f9f9f;
 }
 
 
