@@ -468,7 +468,7 @@ a:active {
 
 .footer {
   max-height: 9em;
-  width:100%;	
+  	
 	
 }
 
@@ -478,14 +478,14 @@ a:active {
   grid-template-columns: auto auto;
   padding: 0.5em;
   grid-gap: 2em;
-  width:100%;
+  
 }
 
 .foot > div {
   text-align: center;
   padding: 1em;
   color: white;
-  width:100%;
+ 
 }
 
 .copyright p {
