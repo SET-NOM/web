@@ -14,15 +14,16 @@ html {
 body {
   width: 100%;
   margin: auto;
+ background: crimson;
 }
 
-img[title]:hover::after{
+/*img[title]:hover::after{
 	
 	background: red;
 	color:yellowgreen;
 	border-radius:5px;
 	
-}
+}*/
 
 
 #demotext {
@@ -40,17 +41,24 @@ img[title]:hover::after{
     -27px 54px 1px #e2e0df, -28px 56px 1px #e4e3e2,
     2px 2px 2px rgba(206, 89, 55, 0);
   color: black;
-  background: #ffffff;
   font-family: montserrat;
 }
 
 
-
+nav{
+	box-shadow: 0 6px 68px -12px;
+	background:#f7c050;
+	position:fixed; 
+	top:0;
+	z-index:5; 
+	width:100%;
+}
 
 ul .menu{
 	
 	width: 100%;
 	overflow: auto;
+	
 }
 
 .menu {
@@ -60,7 +68,7 @@ ul .menu{
   align-items: center;
   max-width: 700px;
   margin: 0 auto;
-
+   
   padding: 2em 0;
   list-style: none;
 }
@@ -146,47 +154,124 @@ ul .menu{
 }
 
 
-		div#carousel { 
-  perspective: 1200px; 
-  padding-top: 10%; 
-  font-size:0; 
-  margin-bottom: 3rem; 
-  overflow: hidden; 
+
+#slideshow {
+	margin: 0 auto;
+	height: 300px;
+	width: 100%;
+	
+	box-sizing: border-box;
 }
-figure#spinner { 
-  transform-style: preserve-3d; 
-  height: 300px; 
-  transform-origin: 50% 50% -500px; 
-  transition: 1s; 
+
+.slideshow-title {
+	font-family: 'Allerta Stencil';
+	font-size: 62px;
+	color: #fff;
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 25%;
+	letter-spacing: 3px;
+	font-weight: 300;
+}
+
+.sub-heading {
+	padding-top: 50px;
+	font-size: 18px;
+} .sub-heading-two {
+	font-size: 15px;
+} .sub-heading-three {
+	font-size: 13px;
+} .sub-heading-four {
+	font-size: 11px;
+} .sub-heading-five {
+	font-size: 9px;
+} .sub-heading-six {
+	font-size: 7px;
+} .sub-heading-seven {
+	font-size: 5px;
+} .sub-heading-eight {
+	font-size: 3px;
+} .sub-heading-nine {
+	font-size: 1px;
+}
+
+.entire-content {
+	margin: auto;
+	width: 190px;
+	perspective: 1000px;
+	position: relative;
+	padding-top: 80px;
+}
+
+.content-carrousel {
+	width: 100%;
+	position: absolute;
+	float: right;
+	animation: rotar 24s infinite linear;
+	transform-style: preserve-3d;
+}
+
+.content-carrousel:hover {
+	animation-play-state: paused;
+	cursor: pointer;
+}
+
+.content-carrousel figure {
+	width: 100%;
+	height: 120px;
+	border: 1px solid #3b444b;
+	overflow: hidden;
+	position: absolute;
+}
+
+.content-carrousel figure:nth-child(1) {
+	transform: rotateY(0deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(2) {
+	transform: rotateY(40deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(3) {
+	transform: rotateY(80deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(4) {
+	transform: rotateY(120deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(5) {
+	transform: rotateY(160deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(6) {
+	transform: rotateY(200deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(7) {
+	transform: rotateY(240deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(8) {
+	transform: rotateY(280deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(9) {
+	transform: rotateY(320deg) translateZ(300px); 
+} .content-carrousel figure:nth-child(10) {
+	transform: rotateY(360deg) translateZ(300px); 
 } 
-figure#spinner img { 
-  width: 40%; max-width: 425px; 
-  position: absolute; left: 30%;
-  transform-origin: 50% 50% -500px;
-  outline:1px solid transparent; 
+
+.shadow {
+    position: absolute;
+    box-shadow: 0px 0px 20px 0px #000;
+    border-radius: 1px;
 }
-figure#spinner img:nth-child(1) { transform:rotateY(0deg); 
+
+.content-carrousel img {
+	image-rendering: auto;
+	transition: all 300ms;
+	width: 100%;
+	height: 100%;
 }
-figure#spinner img:nth-child(2) { transform: rotateY(-45deg); }
-figure#spinner img:nth-child(3) { transform: rotateY(-90deg); }
-figure#spinner img:nth-child(4) { transform: rotateY(-135deg); }
-figure#spinner img:nth-child(5){ transform: rotateY(-180deg); }
-figure#spinner img:nth-child(6){ transform: rotateY(-225deg); }
-figure#spinner img:nth-child(7){ transform: rotateY(-270deg); }
-figure#spinner img:nth-child(8){ transform: rotateY(-315deg); }
-div#carousel ~ span { 
-  color: #f7c050; 
-  margin: 1em; 
- 
-  display: inline-block; 
-  text-decoration: none; 
-  font-size: 6rem; 
-  transition: 0.6s color; 
-  position: relative; 
-  margin-top: -9rem; 
-  border-bottom: none; 
-  line-height: 0; }
-div#carousel ~ span:hover { color:#5087f7; cursor: pointer; }
+
+.content-carrousel img:hover {
+	transform: scale(1.2);
+	transition: all 300ms;
+}
+
+@keyframes rotar {
+	from {
+		transform: rotateY(0deg);
+	} to {
+		transform: rotateY(360deg);
+	}
+}
+
 
 
 
@@ -197,9 +282,22 @@ div#carousel ~ span:hover { color:#5087f7; cursor: pointer; }
 .acerca {
   height: 100%;
   
-  padding: 5em 8em;
-  background: teal;
+  padding: 10em 0em;
+  /*background: teal;*/
   font-family: Open Sans;
+}
+
+.amarca{
+	background: crimson;
+	padding: 4em 8.5em;
+	margin: 0;
+	clip-path: polygon(0 0%, 100% 17%, 100% 100%, 0 80%);
+	
+}
+.apersonal{
+	background: gray;
+	  padding: 10em 8.5em;
+	clip-path: polygon(0 17%, 100% 0, 100% 80%, 0 100%);
 }
 
  
@@ -218,7 +316,7 @@ div#carousel ~ span:hover { color:#5087f7; cursor: pointer; }
   -moz-text-align-last: center;
   text-align-last: center;
   background: #f7c050;
-  box-shadow: 5px 5px 15px 2px silver;
+  box-shadow:0 8px 12px -5px ;
 }
 
 .portafolio {
@@ -235,9 +333,9 @@ div#carousel ~ span:hover { color:#5087f7; cursor: pointer; }
 
 #gallery {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-gap: 0.6em;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 0.9em;
 }
 @media (max-width: 800px) {
   #gallery {
@@ -406,15 +504,16 @@ div#carousel ~ span:hover { color:#5087f7; cursor: pointer; }
 
 .contacto {
   height: 100%;
-  		
-  padding: 5em 8em;
+  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
+
+  padding: 5em 6em;
   background: teal;
   font-family: Montserrat;
 }
 
 .contactbox {
-  border: 0.3em solid white;
-	margin: 0.5em 5em;
+  	margin: 0em 0em;
+	grid-template-columns: repeat(2, 1fr);
   
 }
 
@@ -532,6 +631,13 @@ a:active {
   text-decoration: none;
 }
 
+.redname{
+	
+	padding: 0 5em 5em;
+	margin: 0 14em;
+	
+}
+
 .footer {
   max-height: 9em;
   width:100%;	
@@ -558,31 +664,37 @@ a:active {
 .copyright p {
   font-family: Montserrat;
   text-align: right;
-  padding: 1.8em 7em ;
+  padding: 2em 7em ;
   font-size: 1em;
   margin: auto;
 }
 
-/*
+#myBtn img {
+	
+	width: 20px;
+	padding: 0;
+	
+	
+}
 #myBtn {
   display: none;
   position: fixed;
-  bottom: 20px;
-  right: 30px;
+  bottom: 37px;
+  right: 24px;
   z-index: 99;
-  overflow:hidden;
+  /*overflow:hidden;*/
   border: none;
   outline: none;
-  background: #6d29bd;
+  background: #C050F7;
   margin: auto;
   cursor: pointer;
-  padding: 1.5em;
+  padding: 0.8em 1.2em;
   scroll-behavior: smooth;
   border-radius: 50%;
 }
 
 #myBtn:hover {
-   background: #9f9f9f;
+   background: crimson;
 }
-*/
+
 
