@@ -1,19 +1,26 @@
 @charset "utf-8";
 /* CSS Document */
 
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@850&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Atma:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap");
 
 html {
   width: 100%;
-  font-family: "Montserrat", "open sans", sans-serif;
+  font-family: Cambria,"sans-serif" ;
   place-items: center;
 
 }
 
+body{
+	
+	font-family: Cambria, "sans-serif" ;
+	
+}
+
 h1{
 	font-size: 250% ;
+	
 }
 
 body {
@@ -46,8 +53,17 @@ body {
     -27px 54px 1px #e2e0df, -28px 56px 1px #e4e3e2,
     2px 2px 2px rgba(206, 89, 55, 0);
   color: #FFCB5D;
-  font-family: montserrat;
+  font-family: 'Bungee Shade', cursive;
 	padding: 13% 0 5%;
+  animation-name: demotext;
+  animation: demotext 6s infinite;
+  animation-direction: alternate-reverse;
+}
+
+
+@keyframes demotext {
+  from {top: 50px; }
+  to {top: 80px; color:#C050F7}
 }
 
 
@@ -58,6 +74,7 @@ nav{
 	top:0;
 	z-index:5; 
 	width: 100%;
+	font-family: atma;
 }
 
 ul .menu{
@@ -73,18 +90,18 @@ ul .menu{
   justify-content: center;
   align-items: center;
   max-width: 100%;
-  margin: 0 auto;
+  margin: 0;
    
-  padding: 2% 5%;
+  padding: 4%;
   list-style: none;
 }
 .menu li {
-  margin: 0 8%;
+  margin: 0 6.7%;
   transition: background-position-x 0.9s linear;
   text-align: center;
 }
 .menu li a {
-  font-size: 145%;
+  font-size: 27px;
   padding: 0;
   color: white;
   text-decoration: none;
@@ -93,9 +110,9 @@ ul .menu{
 
 .menu li:hover a {
   color: white;
-  font-size: 135%;
+  font-size: 22px;
   border-radius: 8px;
-  padding: 4.5% 10%;
+  padding: 5px 16px;
   background: crimson;
   	
 	
@@ -277,49 +294,68 @@ ul .menu{
 
 
 
+/*intro*/
 
-/*fin inicio*/
+.video{
+	padding: 8% 0;
+	margin: 0;
+}
 
 
+/*cards portfolio*/
+
+
+/*end cards portfolio*/
+
+
+
+
+
+
+
+
+
+
+/*fin index*/
 
 .acerca {
   height: 100%;
   margin: 6% 0%;
-  padding: 10% 0%;
+  padding: 10% 0% 0%;
   /*background: teal;*/
-  font-family: Open Sans;
+  font-family: Cambria;
 }
 
 .amarca{
 	background: crimson;
-	padding: 5% 11%;
+	padding: 11%;
 	margin: 0;
 	clip-path: polygon(0 0%, 100% 17%, 100% 100%, 0 80%);
 	
 }
 .apersonal{
 	background: white;
-	padding: 16% 11%;
+	padding: 7% 11%;
 	clip-path: polygon(0 17%, 100% 0, 100% 80%, 0 100%);
 }
 
 #hojadevida{
 	text-shadow: 3px 5px 4px teal; 
 	font-size: 130%;  
+	font-weight: bold;
 	letter-spacing: 0.1em; 
 	color: teal;
 
 }
 #hojadevida:hover{
 	
-	color: rebeccapurple;
+	color: #C050F7;
 	cursor: pointer;
-	
 	
 }
 
+
 .nombre h1 {
-  font-family: Montserrat, san-serif;
   color: white;
   font-size: 155%;
 }
@@ -337,16 +373,15 @@ ul .menu{
 
 .portafolio {
   height: 100%;
-  padding: 10% 0%;
+  padding: 12% 0%;
   background: crimson;
-  font-family: Open Sans;
-}
+ }
 
 .contacto {
   height: 100%;
-  clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);
-  padding: 10% 0%;
-  font-family: Montserrat;
+ /* clip-path: polygon(0 0, 100% 15%, 100% 100%, 0 85%);*/
+  padding: 18% 0 5% 0%;
+  
 }
 
 .contactbox {
@@ -474,6 +509,7 @@ a:active {
 	padding: 2% 2% 5%;
 	margin: 0 10%;
 	background: #C050F7;
+	font-family: atma;
 	
 }
 
@@ -501,7 +537,6 @@ a:active {
 }
 
 .copyright p {
-  font-family: Montserrat;
   text-align: right;
   padding: 6% 11% ;
   font-size: 100%;
