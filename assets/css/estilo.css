@@ -19,11 +19,12 @@ body{
 }
 
 h1{
-	font-size: 250% ;
+	font-size: 32px ;
 	
 }
 
 body {
+ 
   width: 100%;
   margin: auto;
  background: white;
@@ -37,8 +38,7 @@ body {
 	
 }*/
 
-
-#demotext {
+/*#demotext {
   text-align: center;
   font-size: 370%;
   text-shadow: 1px -1px 0 #767676, -1px 2px 1px #737272, -2px 4px 1px #767474,
@@ -65,7 +65,11 @@ body {
   from {top: 50px; }
   to {top: 80px; color:#C050F7}
 }
+*/
 
+.setname{
+	
+}
 
 nav{
 	box-shadow: 0 6px 68px -12px;
@@ -126,9 +130,19 @@ ul .menu{
   }
 }
 
+.inicio{
+	margin-top: 98px;
+	
+	
+}
+.new-back{
+	height: 870px;
+	background-image: url("file:///C:/Users/Dana/Downloads/Entregable%203/img/setweb-01.png");
+}
 
 .image-container {
   display: grid;
+  	
   justify-self: center;
   align-items: center;
   grid-template-columns: repeat(4, 1fr);
@@ -162,15 +176,7 @@ ul .menu{
   clip-path: var(--clip-end);
 }
 
-@media (max-width: 800px) {
-  .image-container {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    width: 100%;
-    grid-gap: 1rem;
-    padding: 4.5em;
-  }
-}
+
 
 
 
@@ -303,7 +309,33 @@ ul .menu{
 
 
 /*cards portfolio*/
+.grid-cards{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 5% 10%;
+}
+.grid-cards .itemcd {
+  text-align: center;
+  margin: 20px 0;	
+}
 
+.itemcd img{
+	
+	width: 350px;
+}
+/*.card-text{
+	font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+	font-size: 24px;
+	display: inline-flex;
+	position: absolute;
+	align-self: flex-start;
+	font-weight:800; 	
+	color: red;
+}*/
+.itemcd:hover{
+	
+	opacity: 0.7;
+}
 
 /*end cards portfolio*/
 
@@ -320,23 +352,25 @@ ul .menu{
 
 .acerca {
   height: 100%;
-  margin: 6% 0%;
+  margin: 8% 0% 0;
   padding: 10% 0% 0%;
   /*background: teal;*/
   font-family: Cambria;
+  	
 }
 
 .amarca{
-	background: crimson;
-	padding: 11%;
+	background:#082a6b;/*azul*/
+	padding: 7% 11%;
 	margin: 0;
-	clip-path: polygon(0 0%, 100% 17%, 100% 100%, 0 80%);
+	clip-path: polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
+	-webkit-clip-path:polygon(0 20%, 100% 0%, 100% 80%, 0% 100%);
 	
 }
 .apersonal{
 	background: white;
-	padding: 7% 11%;
-	clip-path: polygon(0 17%, 100% 0, 100% 80%, 0 100%);
+	padding: 0% 11% 2%;
+	
 }
 
 #hojadevida{
@@ -369,13 +403,75 @@ ul .menu{
   text-align-last: center;
   background: #f7c050;
   box-shadow:0 8px 12px -5px ;
+  animation: titles 2s ease-in-out 0s 1 normal none;	
 }
+@keyframes titles {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 1;
+    transform: translateY(-45px);
+  }
+
+  24% {
+    opacity: 1;
+  }
+
+  40% {
+    animation-timing-function: ease-in;
+    transform: translateY(-24px);
+  }
+
+  65% {
+    animation-timing-function: ease-in;
+    transform: translateY(-12px);
+  }
+
+  82% {
+    animation-timing-function: ease-in;
+    transform: translateY(-6px);
+  }
+
+  93% {
+    animation-timing-function: ease-in;
+    transform: translateY(-4px);
+  }
+
+  25%,
+  55%,
+  75%,
+  87% {
+    animation-timing-function: ease-out;
+    transform: translateY(0px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+
 
 .portafolio {
   height: 100%;
   padding: 12% 0%;
-  background: crimson;
+  background: #082a;
  }
+.grid-portfolio{
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  padding: 5% 10%;
+}
+.item {
+  border: 1px solid yellow;
+  padding: 5px;
+  margin: 10px;
+  text-align: center;
+}
+
+
+
 
 .contacto {
   height: 100%;
@@ -386,16 +482,26 @@ ul .menu{
 
 .contactbox {
   	margin: 0;
-	grid-template-columns: repeat(2, 1fr);
+	padding: 80px 0;
+	background: #082a6b;
+	
 }
 
-
+.contactbox-text{
+	margin: 2.5em;
+	color: white; 
+	font-size: 1.2em; 
+	word-spacing: 1em; 
+	text-align: center;  
+	-moz-text-align-last: center;  
+	text-align-last: center; 
+}
 
 .wrapper {
   align-content: flex-end;
   display: inline-flex;
  
-  padding: 8% 0 0;	
+  padding: 4% 0 0;	
 	
 }
 
@@ -415,26 +521,26 @@ ul .menu{
 .wrapper .icon span {
   display: block;
   height: 60px;
-  width: 80px;
-  
-  
+  width: 80px; 
+ 
   border-radius: 15px;
   position: relative;
   z-index: 2;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
   transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
+.icon span{
+	background:#800040;
+}
 .wrapper .icon span i {
   line-height: 30px;
   font-size: 50px;
-  color: white;
 }
 .wrapper .icon .tooltip {
   position: absolute;
   top: 0;
   z-index: 1;
-  background: #fff;
-  color: #fff;
+	background: green;
   padding: 10px 22px;
   font-size: 100%;
   font-weight: 200;
@@ -461,7 +567,7 @@ ul .menu{
   transition: 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 .wrapper .icon:hover span {
-  color: black;
+  color: white;
 }
 .wrapper .icon:hover span,
 .wrapper .icon:hover .tooltip {
@@ -506,11 +612,16 @@ a:active {
 
 .redname{
 	
-	padding: 2% 2% 5%;
-	margin: 0 10%;
-	background: #C050F7;
-	font-family: atma;
 	
+	padding: 2% 5% 2% 5%;
+	margin: 0 0%;
+	
+	/*background: #C050F7;
+	font-family: atma;
+	-webkit-clip-path: polygon(30% 50%, 0 0, 100% 0%, 70% 50%, 100% 100%, 0 100%);
+	clip-path: polygon(30% 50%, 0 0, 100% 0%, 70% 50%, 100% 100%, 0 100%);*/
+	/*-webkit-clip-path: polygon(47% 20%, 63% 0, 80% 20%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0, 17% 20%, 32% 0);
+	clip-path: polygon(47% 20%, 63% 0, 80% 20%, 100% 0, 100% 100%, 50% 100%, 0 100%, 0 0, 17% 20%, 32% 0);*/
 }
 
 .footer {
@@ -572,3 +683,18 @@ a:active {
 }
 
 
+
+
+
+@media (max-width: 800px) {
+  .image-container {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    width: 100%;
+    grid-gap: 1rem;
+    padding: 4.5em;
+  }
+
+  .grid-portfolio{
+    grid-template-columns: auto auto;}	
+}
